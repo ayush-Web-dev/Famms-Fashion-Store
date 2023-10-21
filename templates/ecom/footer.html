@@ -1,0 +1,117 @@
+<style>
+   .footer_social a{
+      width: 40px !important;
+      height: 40px !important;
+   }
+</style>
+{% load static %}
+   <!-- footer start -->
+   <footer>
+      <div class="container p-0">
+         <div class="row">
+            <div class="col-md-4">
+               <div class="full">
+                  <div class="logo_footer">
+                     <a href="#"><img width="210" src="../static/images/logo.png" alt="#" /></a>
+                  </div>
+                  <div class="information_f">
+                     <p><strong>ADDRESS:</strong> Dharamshala, Himachal Pradesh, India</p>
+                     <p><strong>TELEPHONE:</strong> +91 78761-65395</p>
+                     <p><strong>EMAIL:</strong> ayush1906031018@gmail.com</p>
+                  </div>
+               </div>
+            </div>
+            <div class="col-md-8">
+               <div class="row">
+               <div class="col-md-7">
+                  <div class="row">
+                     <div class="col-md-6">
+                  <div class="widget_menu">
+                     <h3>Menu</h3>
+                     <ul>
+                        <li><a href="/">Home</a></li>
+                        {% comment %} <li><a href="#">About</a></li> {% endcomment %}
+                        <li><a href="testimonials/">Testimonial</a></li>
+                        <li><a href="send-feedback/">Feedback</a></li>
+                        <li><a href="contact/">Contact</a></li>
+                     </ul>
+                  </div>
+               </div>
+               <div class="col-md-6">
+                  <div class="widget_menu">
+                     <h3>Account</h3>
+                     <ul>
+                        {%if request.user.is_authenticated%}
+                        <li><a href="my-order/">Track Orders</a></li>
+                        <li><a href="my-profile">Edit Profile</a></li>
+                        {%else%}
+                        <li><a href="customerlogin/">Login</a></li>
+                        <li><a href="customersignup/">Register</a></li>
+                        {%endif%}
+                     </ul>
+                  </div>
+               </div>
+                  </div>
+               </div>     
+               <div class="col-md-5 p-0">
+                  <div class="widget_menu">
+                     <h3>Newsletter</h3>
+                     <div class="information_f">
+                        <p>Subscribe to our newsletter and get daily update.</p>
+                     </div>
+                     <div class="form_sub">
+                        <form>
+                           <fieldset>
+                              <div class="field">
+                                 <input type="email" placeholder="Enter Your Mail" name="email" />
+                                 <input type="submit" value="Subscribe" />
+                              </div>
+                           </fieldset>
+                        </form>
+                     </div>
+                  </div>
+               </div>
+               </div>
+            </div>
+         </div>
+      </div>
+   </footer>
+   <!-- footer end -->
+   <!-- footer section -->
+   <footer class="footer_section">
+      <div class="container">
+         <div class="row text-center justify-content-center align-content-center">
+            <div class="col-4 footer-col">
+               <div class="footer_detail">
+                  <a href="/" class="footer-logo text-center">
+                     Famms Store by Ayush
+                  </a>
+                  <p>
+                     
+                  </p>
+                  <div class="footer_social justify-content-evenly">
+                     <a href="https://github.com/ayush-Web-dev">
+                     <i class="fa fa-github" aria-hidden="true"></i>
+                     </a>
+                     <a href="mailto:ayush1906031018@gmail.com">
+                     <i class="fa fa-google" aria-hidden="true"></i>
+                     </a>
+                     <a href="https://www.linkedin.com/in/ayush-953745203/">
+                     <i class="fa fa-linkedin" aria-hidden="true"></i>
+                     </a>
+                     <a href="https://www.instagram.com/ig__ayush___/">
+                     <i class="fa fa-instagram" aria-hidden="true"></i>
+                     </a>
+                  </div>
+               </div>
+            </div>
+         </div>
+            <div class="footer-info">
+                  <div class="col-lg-7 mx-auto px-0">
+                     <p class="mx-auto">© 2023 All Rights Reserved By <a href="https://ayush-web-dev.github.io/" target="_blank">Ayush</a>
+                     </p>
+                  </div>
+            </div>
+      </div>
+   </footer>
+   <!-- footer section -->    

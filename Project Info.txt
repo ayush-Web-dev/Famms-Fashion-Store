@@ -1,0 +1,10 @@
+***Developed by Ayush (1906031018)***
+***Student of B.TECH CSE at Govt PG College Dharamshala***
+
+**Instructions**
+- Install the Requirements: pip install -r req.txt
+- Then, make database migrations: py manage.py makemigrations
+- py manage.py migrate
+- And finally, run the application: py manage.py runserver
+
+For Admin Account, please create one with superuser: py manage.py createsuperuser

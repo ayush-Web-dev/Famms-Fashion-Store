@@ -1,0 +1,52 @@
+{% extends 'ecom/base.html' %}
+{% load static %}
+{% load widget_tweaks %}
+{% block content %}
+
+{%if request.user.is_authenticated%}
+{% include "ecom/customer_base.html" %}
+{%else%}
+{% include "ecom/navbar.html" %}
+{%endif%}
+
+<!-- inner page section -->
+<section class="inner_page_head">
+	<div class="container_fuild">
+	   <div class="row">
+		  <div class="col-md-12">
+			 <div class="full">
+				{%if request.user.is_authenticated%}
+				<h3>Customer Feedback</h3>
+				{%else%}
+				<h3>Your Feedback</h3>
+				{%endif%}
+			 </div>
+		  </div>
+	   </div>
+	</div>
+ </section>
+ <!-- end inner page section -->
+ <div class="border mt-2 pb-5">
+	<form method="post">
+	{% csrf_token %}
+		<ul class="form-style-1">
+			<li class="mt-4 pt-2">
+				<label style="font-size:20px">Name <span class="required">*</span></label>
+				{% render_field feedbackForm.name class="field-long" placeholder="Your name" %}
+
+			</li>
+
+			<li class="mt-4 pt-2">
+				<label style="font-size:20px">Message <span class="required">*</span></label>
+				{% render_field feedbackForm.feedback id="field5" class="field-long field-textarea" placeholder="Your feedback" %}
+
+			</li>
+			<li class="mt-4 pt-2">
+				<input type="submit" value="Send" />
+			</li>
+		</ul>
+	</form>
+ </div>
+
+
+{% endblock content %}
